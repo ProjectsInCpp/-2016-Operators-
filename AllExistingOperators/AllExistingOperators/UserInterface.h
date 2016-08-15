@@ -5,10 +5,10 @@
 const std::string newLine = "\n";
 
 class Complex;
-void receivingValues(std::vector<Complex>& values, int size)
+void receivingValues(std::vector<Complex>& values)
 {
     std::cout << "Hi" << newLine << "Please put your numbers" << newLine;
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < values.size(); i++)
     {
         std::cout << newLine << "It is " << i + 1 << "value" << newLine;
         std::cin >> values.at(i);
@@ -16,10 +16,10 @@ void receivingValues(std::vector<Complex>& values, int size)
     std::cout << "\n";
 }
 
-void printingValues(std::vector<Complex>& values, int size)
+void printingValues(std::vector<Complex>& values)
 {
     std::cout << newLine << "*************************" << newLine << "Hi Your values" << newLine;
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < values.size(); i++)
     {
         std::cout << "\nIt is " << i + 1 << "value\n";
         std::cout << values.at(i);
