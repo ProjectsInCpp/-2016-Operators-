@@ -6,3 +6,12 @@ std::ostream& operator<<(std::ostream& retVal, const Complex& inArg)
     return retVal;
 }
 
+void Complex::setReal(int inArg)
+{
+    real_ = inArg;
+}
+
+void Complex::setImagine(int inArg)
+{
+    imagine_ = inArg;
+}

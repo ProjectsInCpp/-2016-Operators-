@@ -1,0 +1,27 @@
+// AllExistingOperators.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "Complex.h"
+#include <vector>
+
+const std::string newLineSeparator = "\n";
+
+int main()
+{
+    int inputVal;
+    unsigned int ammountOfNumbers = 3;
+    std::vector<Complex> values{ ammountOfNumbers };
+
+    std::cout << "Hi\n Please put your numbers\n";
+    std::cout << "** First Number ** \n";
+    //while (!std::cin >> inputVal)
+    //{
+    //    std::cin.clear();
+    //    std::cout << std::endl << "Column size must be an integer" << endl << endl;
+    //    cout << "Enter the number of columns: ";
+    //}
+
+    return 0;
+}
+
