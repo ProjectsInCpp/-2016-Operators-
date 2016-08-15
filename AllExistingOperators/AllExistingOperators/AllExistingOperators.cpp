@@ -6,15 +6,17 @@
 #include "UserInterface.h"
 #include <vector>
 
+enum class OPERATION;
+
 void receivingValues(std::vector<Complex>& values);
-//void receivingOperation(std::vector<Complex>& values);
-//void calculation(std::vector<Complex>& values);
+OPERATION receivingOperation();
 void printingValues(std::vector<Complex>& values);
 
 int main()
 {
     constexpr unsigned int ammountOfNumbers = 3;
     std::vector<Complex> values{ ammountOfNumbers };
+    OPERATION chosenOperation = receivingOperation();
 
     receivingValues(values);
     printingValues(values);
