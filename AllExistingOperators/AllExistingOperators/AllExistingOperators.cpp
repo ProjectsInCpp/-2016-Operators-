@@ -8,18 +8,19 @@
 
 enum class OPERATION;
 
-void receivingValues(std::vector<Complex>& values);
-OPERATION receivingOperation();
-void printingValues(std::vector<Complex>& values);
+OPERATION receiveOperation();
+void receiveValues(std::vector<Complex>& values);
+void printValues(std::vector<Complex>& values);
+
 
 int main()
 {
     constexpr unsigned int ammountOfNumbers = 3;
     std::vector<Complex> values{ ammountOfNumbers };
-    OPERATION chosenOperation = receivingOperation();
 
-    receivingValues(values);
-    printingValues(values);
+    OPERATION chosenOperation = receiveOperation();
+    receiveValues(values);
+    printValues(values);
 
     return 0;
 }

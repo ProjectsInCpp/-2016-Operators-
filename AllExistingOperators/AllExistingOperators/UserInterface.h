@@ -12,7 +12,7 @@ enum class OPERATION
     UNDEFINED
 };
 
-OPERATION receivingOperation()
+OPERATION receiveOperation()
 {
     char chosenOperation;
     OPERATION parsedOperation;
@@ -45,7 +45,7 @@ OPERATION receivingOperation()
 }
 
 class Complex;
-void receivingValues(std::vector<Complex>& values)
+void receiveValues(std::vector<Complex>& values)
 {
     std::cout << "Hi" << newLine << "Please put your numbers" << newLine;
     for (unsigned int i = 0; i < values.size(); i++)
@@ -56,7 +56,7 @@ void receivingValues(std::vector<Complex>& values)
     std::cout << "\n";
 }
 
-void printingValues(std::vector<Complex>& values)
+void printValues(std::vector<Complex>& values)
 {
     std::cout << newLine << "*************************" << newLine << "Hi Your values" << newLine;
     for (unsigned int i = 0; i < values.size(); i++)
