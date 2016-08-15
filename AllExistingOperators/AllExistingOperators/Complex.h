@@ -12,6 +12,7 @@ public:
     Complex() : real_(0), imagine_(0) {};
     Complex(int real, int imagine) : real_(real), imagine_(imagine) {};
     friend std::ostream& operator<<(std::ostream& retVal, const Complex& inArg);
+    friend std::istream& operator>>(std::istream& retVal, Complex& inArg);
 
     void setReal(int inArg);
     void setImagine(int inArg);

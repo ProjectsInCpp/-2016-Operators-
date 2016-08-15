@@ -14,16 +14,20 @@ int main()
     constexpr unsigned int ammountOfNumbers = 3;
     std::vector<Complex> values{ ammountOfNumbers };
 
-    std::cout << "Hi\n Please put your numbers\n";
+    std::cout << "Hi\nPlease put your numbers\n";
     for (int i = 0; i < ammountOfNumbers; i++)
     {
         std::cout << "\nIt is " << i + 1 << "value\n";
-        std::cout << "Pass Real:"; std::cin >> inputReal;
-        std::cout << "Pass Imagine:"; std::cin >> inputImagine;
-        
-        values.at(i).setReal(inputReal);
-        values.at(i).setReal(inputImagine);
+        std::cin >> values.at(i);
     }
+
+    std::cout << "\n*************************\nHi Your values\n";
+    for (int i = 0; i < ammountOfNumbers; i++)
+    {
+        std::cout << "\nIt is " << i + 1 << "value\n";
+        std::cout << values.at(i);
+    }
+    std::cout << "\n";
 
     return 0;
 }
