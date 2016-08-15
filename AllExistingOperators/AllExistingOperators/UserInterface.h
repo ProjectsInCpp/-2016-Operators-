@@ -1,16 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
-
-const std::string newLine = "\n";
-
-enum class OPERATION
-{
-    ADD,
-    SUBTRACT,
-    MULTI,
-    UNDEFINED
-};
+#include <string>
+#include "Utils.h"
 
 OPERATION receiveOperation()
 {

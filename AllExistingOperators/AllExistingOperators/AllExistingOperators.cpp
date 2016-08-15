@@ -4,12 +4,14 @@
 #include "stdafx.h"
 #include "Complex.h"
 #include "UserInterface.h"
+#include "Calculations.h"
 #include <vector>
 
 enum class OPERATION;
 
 OPERATION receiveOperation();
 void receiveValues(std::vector<Complex>& values);
+Complex& calculate(std::vector<Complex>& values, OPERATION chosenOperation);
 void printValues(std::vector<Complex>& values);
 
 
@@ -20,7 +22,8 @@ int main()
 
     OPERATION chosenOperation = receiveOperation();
     receiveValues(values);
-    printValues(values);
+    Complex retVal = calculate(values, chosenOperation);
 
+    std::cout << retVal << std::endl;
     return 0;
 }

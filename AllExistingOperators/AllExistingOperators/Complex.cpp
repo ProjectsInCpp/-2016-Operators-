@@ -10,6 +10,30 @@ void Complex::setImagine(int inArg)
     imagine_ = inArg;
 }
 
+Complex& Complex::operator+(Complex& inVal)
+{
+    real_ += inVal.real_;
+    imagine_ += inVal.imagine_;
+
+    return *this;
+}
+
+Complex& Complex::operator-(Complex& inVal)
+{
+    real_ -= inVal.real_;
+    imagine_ -= inVal.imagine_;
+
+    return *this;
+}
+
+Complex& Complex::operator*(Complex& inVal)
+{
+    real_ *= inVal.real_;
+    imagine_ *= inVal.imagine_;
+
+    return *this;
+}
+
 std::ostream& operator<<(std::ostream& retVal, const Complex& inArg)
 {
     retVal << "(" << inArg.real_ << "," << inArg.imagine_ << ")";

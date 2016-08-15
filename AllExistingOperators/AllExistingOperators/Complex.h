@@ -14,6 +14,10 @@ public:
     friend std::ostream& operator<<(std::ostream& retVal, const Complex& inArg);
     friend std::istream& operator>>(std::istream& retVal, Complex& inArg);
 
+    Complex& operator+(Complex& inVal);
+    Complex& operator-(Complex& inVal);
+    Complex& operator*(Complex& inVal);
+
     void setReal(int inArg);
     void setImagine(int inArg);
 };
